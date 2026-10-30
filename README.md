@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # FakeNews AI
 
 <p align="center">
