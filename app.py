@@ -9,13 +9,22 @@ app = Flask(__name__)
 # -----------------------------
 # Load Model
 # -----------------------------
-MODEL_PATH = os.path.join("models", "fake_news_model.pkl")
+
+import os
+import joblib
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "models", "fake_news_model.pkl")
 
 try:
+    if not os.path.exists(MODEL_PATH):
+        raise FileNotFoundError(f"Model file not found at: {MODEL_PATH}")
+
     model = joblib.load(MODEL_PATH)
     print("Model Loaded Successfully")
+
 except Exception as e:
-    print("Error Loading Model:", e)
+    print("Error Loading Model:", repr(e))
     model = None
 
 
