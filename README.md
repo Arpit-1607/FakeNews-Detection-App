@@ -26,6 +26,10 @@ Detect whether a news article is **Real** or **Fake** using **Natural Language P
 
 ---
 
+**Live Demo**
+
+https://fake-news-detection-app-xi.vercel.app/
+
 #  Overview
 
 FakeNews AI is a machine learning web application that classifies news articles into **Real** or **Fake** using **TF-IDF Vectorization** and a **Logistic Regression** classifier.
